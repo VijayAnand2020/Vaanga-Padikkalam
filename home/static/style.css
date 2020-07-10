@@ -1,4 +1,4 @@
-/* Started working! on 28=06-2020 22:18 */
+/* Started working on the Project! on 28=06-2020 22:18 */
 
 @font-face{
     font-family: navFont;
@@ -24,8 +24,6 @@ body{
 nav{
     width: 100%;
     height: 80px;
-    /* background: rgba(0, 0, 0, 0.9); */
-    /* Image-colors: rgb(13, 32, 84)  #0d2054 */
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -58,7 +56,6 @@ nav ul li a{
     color: rgba(255, 69, 0, 0.8);
     line-height: 80px;
     padding-left: 10px;
-    /* padding-right: 10px; */
     margin-right: 10px;
 }
 
@@ -78,13 +75,10 @@ a.active,li a:hover{
     background: rgba(0, 0, 0, 0.7);
     color: orangered;
     padding: 0 20px;
-    /* height: 1rem;
-    width: 1rem; */
     font-size: 30px;
     line-height: 80px;
     float: right;
     cursor: pointer;
-    /* margin-right: 40px; */
     display: none;
 }
 
@@ -112,14 +106,11 @@ a.active,li a:hover{
     width: 100%;
     background: rgb(13, 32, 84);
     color: white;
-    /* display: flex;y */
 }
 
 .home_image{
-    /* border: 2px solid black; */
     margin-top: 2rem;
     margin-left: 25rem;
-    /* margin: 8rem 25rem; */
     height: 350px;
     width: 400px;
     z-index: 1;
@@ -146,11 +137,9 @@ a.active,li a:hover{
 
 #team h1{
     text-align: center;
-    /* margin-top: 5rem; */
     padding-top: 4rem;
     text-transform: uppercase;
     font-family: sans-serif;
-    /* text-decoration: underline aqua; */
 }
 
 #team h1::after{
@@ -164,22 +153,16 @@ a.active,li a:hover{
     border-radius: 5px;
 }
 
-/* #team p{
-    color: white;
-} */
-
 .mycard{
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     height: 22rem;
     width: 20rem;
-    /* border: 2px solid black; */
     margin: 5rem 32.5rem;
 }
 
 .upcard{
-    /* border: 2px solid red; */
     width: 100%; 
     height: 20rem;
     clip-path: polygon(0 0, 100% 0, 100% 28%, 0 57%);
@@ -201,17 +184,13 @@ img{
 }
 
 #thanos_desc{
-    /* color: black; */
     transform: translateY(-1050%) translateX(30%);
 }
 
 .mycard{
     height: 22rem;
     width: 20rem;
-    /* border: 2px solid black; */
     margin: 5rem 32.5rem;
-    /* background: url("https://images.pexels.com/photos/950241/pexels-photo-950241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat; */
-    /* background-size: 100% 100%;  */
     background-color: #ffffff;
 }
 
@@ -222,7 +201,6 @@ img{
     background-image: url("https://ak.picdn.net/shutterstock/videos/1032366341/thumb/1.jpg?ip=x480");
     background-size: 100%;
     background-repeat: no-repeat;
-    /* background-color: rgb(0, 255, 85); */
     object-fit: cover;
 }
 
@@ -231,22 +209,9 @@ img{
     border: 5px solid white;
 }
 
-/* #thanos_name{
-    transform: translateY(-1000%) translateX(30%);
-} */
-
 #thanos_desc{
-    /* color: black; */
     transform: translateY(-1000%) translateX(30%);
 }
-
-/* .carousel-control-next-icon{
-    background: url("https://image.flaticon.com/icons/svg/892/892528.svg");
-}
-.carousel-control-prev-icon{
-    background: url("https://image.flaticon.com/icons/svg/892/892512.svg");
-} */
-
 .carousel-control-prev:hover{
     background-color: rgba(0, 0, 0, 0.0001);
 }
@@ -269,31 +234,47 @@ img{
     margin-bottom: 10px;
 }
 
-#contact{
+#content{
     width: 100%;
     height: 100vh;
-    background-color: green;
+    background: url("https://ae01.alicdn.com/kf/HTB1yqI0XZvrK1Rjy0Feq6ATmVXac/Laeacco-Books-Wooden-Bookshelf-Library-Study-Bokeh-Child-Portrait-Photography-Backdrops-Photo-Backgrounds-Photocall-Photo-Studio.jpg") no-repeat center/cover;
+    color: #ffffff;
 }
 
-/* button{
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 100%;
-    cursor: pointer;
+#content h1{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    padding: 2rem 0;
 }
 
-button:hover{
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: all .5s;
+#content a{
+    color: white;
+    background-color: #3A3042;
 }
 
-#prev_btn{
-    transform: translateY(-800%) translateX(35.9vw);
+.content_list li{
+    padding: 1rem;
+    margin: 3rem;
+    font-size: x-large;
+    width: 15%;
+    background-color: #3A3042;
+    font-weight: bold;
+    border-radius: 15%;
 }
 
-#nxt_btn{
-    transform: translateY(-800%) translateX(59.25vw);
-} */
+#content2{
+    width: 75vw;
+    transform: translateX(20rem) translateY(-29rem);
+}
+
+#content2 li{
+    width: 20%;
+}
+
+.content_list_resp{
+    display: none;
+}
 
 @media (max-width:870px){
     nav ul li a{
@@ -302,6 +283,52 @@ button:hover{
 }
 
 @media (max-width:858px){
+
+    #content h1{
+        margin-bottom: 3rem;
+    }
+
+    #content a{
+        color: white;
+        background-color: #3A3042;
+    }
+
+    /* #content a:active{
+        background-color: #3A3042;
+        color: white;
+    } */
+
+    .content_list{
+        display: none;
+    }
+
+    .content_list_resp{
+        display: block;
+    }
+
+    .content_list_resp li{
+        /* color: white; */
+        display: block;
+        background-color: rgb(58, 48, 66, 0.9);
+        /* width: 40%; */
+        padding: 1rem;
+        margin: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #sep_list li{
+        width: 40%;
+    }
+
+    #content2_resp{
+        transform: translateY(-20rem) translateX(11rem);
+    }
+
+    #content2_resp{
+        width: 11rem;
+    }
+
+
     #vj_img,#sri_img,#Thanos_img{
     border-radius: 100%;
     height: 7.5rem;
@@ -354,7 +381,7 @@ button:hover{
         z-index: 9999999;
     }
 
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
