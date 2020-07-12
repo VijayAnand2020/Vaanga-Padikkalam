@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <title>VSD Guide</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
     </a>
     <div class="main">
         <div id="home">
-            <a href="{% url 'home' %}"><img class="home_image" src="{% static 'home_logo_modifed.png' %}" alt="logo"></a>
+            <a href="{% url 'home' %}"><img class="home_image" src="{% static 'home/home_logo_modifed.png' %}" alt="logo"></a>
             <p>Need E-books? Need any study meterials?</p>
             <p style="font-weight: bold;line-height: 1rem;">Well, You are at the right place.</p>
             <p style="font-weight: bolder;">We have the Study materials you want.</p>
@@ -57,7 +57,7 @@
                         <div class="mycard">
                             <div class="upcard">
                             </div>
-                            <img id="vj_img" style="border-radius: 100%;" src="{% static 'Vj_bg.jpg' %}" width="10%" height="10%" alt="">
+                            <img id="vj_img" style="border-radius: 100%;" src="{% static 'home/Vj_bg.jpg' %}" width="10%" height="10%" alt="">
                             <h3 id="vj_name" style="color: black;">Vijay Anand.R</h3>
                             <p style="font-weight: lighter;color: black;" id='thanos_desc'>Web-Developer</p>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="mycard">
                             <div class="upcard">
                             </div>
-                            <img id="sri_img" style="border-radius: 100%;" src="{% static 'Sri_bg.jpg' %}" width="45%" height="45%" alt="">
+                            <img id="sri_img" style="border-radius: 100%;" src="{% static 'home/Sri_bg.jpg' %}" width="45%" height="45%" alt="">
                             <h3 id='sri_name' style="color: black;">Sri Raam.V.G</h3>
                             <p style="font-weight: lighter;color: black;" id='thanos_desc'>Web-Developer</p>
                         </div>
@@ -75,7 +75,7 @@
                     <div class="mycard">
                         <div class="upcard">
                         </div>
-                        <img id="sri_img" style="border-radius: 100%;" src="{% static 'thanos_modified.png' %}" width="45%" height="45%" alt="">
+                        <img id="sri_img" style="border-radius: 100%;" src="{% static 'home/thanos_modified.png' %}" width="45%" height="45%" alt="">
                         <h3 id="thanos_name" style="color: black;">Dhanush.T</h3>
                         <p style="font-weight: lighter;color: black;" id='thanos_desc'>Web-Developer</p>
                     </div>
