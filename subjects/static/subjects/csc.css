@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mytitle{
+    text-align: center;
+}
+
+.csmain{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    /* background: url("https://www.eschoolnews.com/files/2016/12/computer-science-education-600x400.jpg"); */
+    background-color: red;
+}
+
+.csc_nav{
+    width: 100vw;
+    height: 80px;
+}
