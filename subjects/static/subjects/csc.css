@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face{
+    font-family: NavFont;
+    src: url("./beaver.ttf");
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-#mytitle{
-    text-align: center;
+    text-decoration: none;
+    list-style: none;
 }
 
 .csmain{
@@ -18,4 +24,85 @@
 .csc_nav{
     width: 100vw;
     height: 80px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.logo{
+    font-family: NavFont;
+    font-size: 2.5rem;
+    color: rgba(255, 69, 0, 0.8);
+    line-height: 80px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.csc_nav ul{
+    float: right;
+    margin-right: 90px;
+}
+
+.csc_nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 5px;
+}
+
+.csc_nav ul li a{
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    padding: 7px 13px;
+    /* background-color: white; */
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+    transition: .5s;
+}
+
+.dropdown-menu a{
+    color: black;
+    font-family: sans-serif;
+}
+
+#drop{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.0001);
+    box-shadow: none;
+    border: none;
+}
+
+.dropdown-item{
+    background-color: rgba(0, 0, 0, 0.9);
+    margin:1px;
+}
+.dropdown-menu.show {
+    background: black;
+    display: block;
+    margin: 0;
+}
+
+#droptem{
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+#Home_edit{
+    margin-top: -2px;
+    height: 5rem;
+    text-align: center;
+    width: 8rem;
+    background-color: rgba(0, 0, 0, 0.0001);
+    display: block;
+    margin-bottom: 0%;
+    padding-bottom: 0;
+}
+
+#Home_edit:hover{
+    background-color: white;
+    color: black;
 }

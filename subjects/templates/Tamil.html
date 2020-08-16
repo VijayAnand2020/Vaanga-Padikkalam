@@ -4,10 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'subjects/tamil.css' %}">
-    <title>Tamil</title>
+    <title>தமிழ்</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{% static 'subjects/csc.css' %}">
+    
 </head>
 <body>
-    <h1 id="Topheading">தமிழ்</h1>
+{% comment %} https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260 {% endcomment %}
+    <nav class="csc_nav">
+        <!-- TODO:  Make the navigation bar -->
+        <label class="logo"><a style="color: rgba(255, 69, 0, 0.8);text-decoration: none;" href="{% url 'tamil' %}">தமிழ்</a></label>
+        <ul style="list-style: none;">
+            <li>
+                <a id="Home_edit" href="{% url 'home' %}">
+                    Home💙
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" id="drop" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Subjects
+                    </a>
+                
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a id="droptem" style="background-color: white;color: black;" class="dropdown-item active" href="{% url 'csc' %}">தமிழ்</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'english' %}">English</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'maths' %}">Maths</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'physics' %}">Physics</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'chemistry' %}">Chemistry</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'tamil' %}">Computer Science</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'botany' %}">Botany</a>
+                        <a id="droptem" class="dropdown-item" href="{% url 'zoology' %}">Zoology</a>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="csmain">
+        
+    </div>
 </body>
 </html>
