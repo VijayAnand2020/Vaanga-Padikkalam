@@ -1,52 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
 
-html{
-    margin-top: -16px;
 }
-
-body{
-    background-image: url("https://miro.medium.com/max/11490/1*DmnHAXJQYsMGbJUke8lmrQ.jpeg");
-    background-attachment:fixed;
+body
+{
+    background: url("https://www.kaplaninternational.com/ar/blog/files/styles/max_1300x1300/public/2018-01/English%20cover.png.jpg?itok=mNV8P8Cv") no-repeat;
+    background-size: 100vw 100vh;
 }
-.heading{
-    font-size: 3.5rem;
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color: #1B1818;
+}
+nav p a
+{
     font-family: cursive;
     font-style: italic;
     font-weight: bolder;
-    color:lavenderblush;
-    padding-left:2rem;
+    color: white;
+    font-size: 32px;
+    line-height: 80px;
+    float: left;
+    padding-left:30px;
 }
-.eng_nav
-{
-    background:black;
-    height:80px;
-    /* margin:30px; */
-}
-#list
-{
-    list-style: none;
-}
-li
+nav ul
 {
     float: right;
-    padding-top: 25px;
-    padding-right: 40px;
+    line-height:80px;
+}
+nav ul li
+{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+nav ul li a
+{
+    display: block;
+    font-family: fantasy;
+    color:white;
     font-size: 20px;
-    font-weight: bolder;
-    font-family: cursive;
-    color: white;
-    text-align: center;
-}
-a{
+    padding:  16px 14px;
     text-decoration: none;
-    color:rgb(240, 108, 240);
+    font-family: Roboto;
 }
-div{
-    color:rgb(243, 29, 29);
-    height:900px;
-    width:500px;
+nav ul li ul
+{
+    display:none;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+nav ul li:hover ul
+{
+    display:block;
+}
+nav ul li ul li
+{
+    width: 200px;
+    border-radius: 4px;
+}
+nav ul li ul a
+{
+    line-height: 1.5rem;
+    padding: 8px  14px;
+    
+}
+nav ul li ul a:hover
+{
+    background-color:whitesmoke;
+    color: black;
 }
