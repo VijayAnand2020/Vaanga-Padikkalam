@@ -119,12 +119,20 @@
                 <a href="{% url 'zoology' %}"><li>Zoology</li></a>
             </ul>
         </div>
+        <div class="feedback">
+            <h1 class="feedback_heading">Feedback<h1>
+            <p class="feedback_para">Please provide your feedback below:</p>
+            <p class="feedback_question"><strong>How do you rate your overall experience?</strong></p>
+            <input type="radio" value="Bad" >
+            <input type="radio" value="Good">
+            <input type="radio" value="Best">
+        </div>
     </div>
-
+        
     <script>
         function check() {
             document.getElementById("check").checked = false;
         }
     </script>
 </body>
-</html>
+</html>    

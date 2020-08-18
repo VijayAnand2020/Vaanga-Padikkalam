@@ -272,6 +272,8 @@ img{
     width: 20%;
 }
 
+
+
 .content_list_resp{
     display: none;
 }
@@ -417,3 +419,21 @@ img{
     font-size: 40px;
 }
 
+
+.feedback
+{
+    height: 40vh;
+    width: calc(100vw - 17px);
+}
+.feedback_heading
+{
+   text-align:center;
+}
+
+.feedback_para{
+    font-size: 2rem;
+}
+
+.feedback_question{
+    font-size:1.5rem;
+}
