@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # 127.0.0.1/tamil/
     path('tamil/', views.tamil, name='tamil'),
     path('english/', views.english, name='english'),
     path('maths/', views.maths, name='maths'),

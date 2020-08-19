@@ -454,9 +454,8 @@ img{
     border-radius: 10%;
     background-color: white;
 }
-
 .submit_button:hover{
     background-color: #007bff;
     border-color: #007bff;
     color: white;
-}
+}      
