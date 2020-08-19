@@ -432,8 +432,31 @@ img{
 
 .feedback_para{
     font-size: 2rem;
+    margin-left: 2rem;
 }
 
 .feedback_question{
-    font-size:1.5rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+#feedback_text{
+    margin-left: 2rem;
+}
+
+.submit_button{
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: 2rem;
+    height: 3.5rem;
+    width: 7rem;
+    border: 2px solid #007bff;
+    border-radius: 10%;
+    background-color: white;
+}
+
+.submit_button:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
 }

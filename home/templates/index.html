@@ -11,6 +11,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <title>VSD Guide</title>
+    <style>
+        input[type=radio] {
+            display: block;
+            margin: 0 auto;
+        }
+        label {
+            margin: 0 3rem;
+            font-size: 1.5rem;
+            /* display: inline-block; */
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -123,9 +134,20 @@
             <h1 class="feedback_heading">Feedback<h1>
             <p class="feedback_para">Please provide your feedback below:</p>
             <p class="feedback_question"><strong>How do you rate your overall experience?</strong></p>
-            <input type="radio" value="Bad" >
-            <input type="radio" value="Good">
-            <input type="radio" value="Best">
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <label><input type="radio" value="Worst" name="radioset" />Worst</label>
+                <label><input type="radio" value="Bad" name="radioset" />Bad</label>
+                <label><input type="radio" value="Good" name="radioset" />Good</label>
+                <label><input type="radio" value="Better" name="radioset" />Better</label>
+                <label><input type="radio" value="Excellent" name="radioset" />Excellent</label>
+                <br>
+                <label style="margin-left: 2rem;" for="feedback_text">Feedback Message:</label>
+                <br>
+                <textarea style="font-size: 1rem; border: 2px solid black;" name="feedback_text" id="feedback_text" placeholder="Give your feedback message here..."  cols="50" rows="10"></textarea>
+                <br>
+                <input style="font-size: 1.5rem;" type="submit" class="submit_button" text="value">
+            </form>
         </div>
     </div>
         
@@ -134,7 +156,5 @@
             document.getElementById("check").checked = false;
         }
     </script>
-</body>
-</html>    
-</body>
-</html>    
+    </body>
+</html>
