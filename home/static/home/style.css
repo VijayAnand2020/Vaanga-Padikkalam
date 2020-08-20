@@ -421,8 +421,8 @@ img{
 
 
 .feedback
-{
-    height: 40vh;
+{  
+     height: 40vh;
     width: calc(100vw - 17px);
 }
 .feedback_heading
@@ -444,18 +444,20 @@ img{
     margin-left: 2rem;
 }
 
-.submit_button{
+.submit_button
+{
     font-family: sans-serif;
     text-align: center;
     margin-left: 2rem;
     height: 3.5rem;
     width: 7rem;
-    border: 2px solid #007bff;
+    border: 2px solid rgba(0, 0, 0, 0.0001);
     border-radius: 10%;
     background-color: white;
 }
-.submit_button:hover{
-    background-color: #007bff;
+.submit_button:hover
+{
+    background-color: rgba(0, 0, 0, 0.0001);
     border-color: #007bff;
     color: white;
-}      
+}

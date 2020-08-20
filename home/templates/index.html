@@ -21,6 +21,20 @@
             font-size: 1.5rem;
             /* display: inline-block; */
         }
+        input[type=text]{
+            margin-left: -1rem;
+            height: 2.5rem;
+            width: 20rem;
+        }
+        .feedback{
+            height: 100vh;
+            background: url("https://allfreedesigns.com/wp-content/uploads/2015/06/black-patterns-16.jpg") repeat;
+            background-attachment: fixed;
+        }
+        .feedback form{
+            background: url("https://allfreedesigns.com/wp-content/uploads/2015/06/black-patterns-16.jpg") repeat;
+            background-attachment: fixed;
+        }
     </style>
 </head>
 <body>
@@ -130,12 +144,14 @@
                 <a href="{% url 'zoology' %}"><li>Zoology</li></a>
             </ul>
         </div>
-        <div class="feedback">
+        <div style="color: white;" class="feedback">
             <h1 class="feedback_heading">Feedback<h1>
             <p class="feedback_para">Please provide your feedback below:</p>
-            <p class="feedback_question"><strong>How do you rate your overall experience?</strong></p>
             <form action="{% url 'home' %}" method="post">
                 {% csrf_token %}
+                <p style="font-size: 1.5rem;margin-left: 2rem;margin-bottom: 0;">Your Name:</p>
+                <label style="margin-bottom: 1rem;" for="feedback_name"><input type="text" name="feedback_name" id=""></label>
+                <p style="margin-top: 1rem;" class="feedback_question"><strong>How do you rate your overall experience?</strong></p>
                 <label><input type="radio" value="Worst" name="radioset" />Worst</label>
                 <label><input type="radio" value="Bad" name="radioset" />Bad</label>
                 <label><input type="radio" value="Good" name="radioset" />Good</label>
