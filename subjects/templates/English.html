@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English</title>
-    <link rel="stylesheet" href="{% static 'subjects/english.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'subjects/english.css' %}"> -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <input type="checkbox" id="check">
         <label for="check" class="menu_btn">
             <i class="material-icons">menu</i>
@@ -17,7 +19,7 @@
         <p><a style="text-decoration: none;color: white;" href="{% url 'english' %}">English</a></p>
         <ul>
             <li style="margin-top: -1rem;margin-right: 4rem;"><a href="{% url 'home' %}">Home</a></li>
-            <li style="margin-right: 8rem;margin-top: -1rem;"><a href="#">Subjects</a>
+            <li class="subj_menu" style="margin-right: 8rem;margin-top: -1rem;"><a href="#">Subjects</a>
               <ul style="margin-top: -1.1rem;">
                   <li><a href="{% url 'tamil' %}" onclick="check()">தமிழ்</a></li>
                   <li><a href="{% url 'english' %}" onclick="check()">English</a></li>
@@ -29,12 +31,45 @@
                   <li><a href="{% url 'zoology' %}" onclick="check()">Zoology</a></li>
               </ul>
             </li>
+            <li>
+                <a href="#">Subjects
+                    <ul class="subj_menu_resp">
+                        <li><a href="#" onclick="check()">தமிழ்</a></li>
+                        <li><a href="#" onclick="check()">English</a></li>
+                        <li><a href="#" onclick="check()">Mathematics/a></li>
+                        <li><a href="#" onclick="check()">Physics</a></li>
+                        <li><a href="#" onclick="check()">Chemistry</a></li>
+                        <li><a href="#" onclick="check()">Computer Science</a></li>
+                        <li><a href="#" onclick="check()">Botany</a></li>
+                        <li><a href="#" onclick="check()">zoology</a></li>
+                    </ul>
+                </a>    
+            </li>
         </ul>
+    </nav> -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" class="brand-logo">Vaanga Padikkalam</a>
+                <a href="#" class="sidenav-trigger" data-target="#slide_out"><i class="material-icons">menu</i></a>
+                <ul class="hide-on-med-and-down right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <ul class="sidenav" id="slide_out">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        function check() {
-            document.getElementById("check").checked = false;
-        }
-    </script>  
+        const slide_menu = document.querySelectorAll(".sidenav");
+        M.Sidenav.init(slide_menu,{});
+    </script>
 </body>
 </html>
