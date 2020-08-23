@@ -114,6 +114,7 @@ a.active,li a:hover{
     height: 350px;
     width: 400px;
     z-index: 1;
+    margin-right: 26rem;
 }
 
 #home{
@@ -413,6 +414,9 @@ img{
     #check:checked ~ ul{
         left: 0;
     }
+    input[type=text]{
+        width: 100vw;
+    }
 }
 
 #mm{
@@ -441,6 +445,7 @@ img{
 }
 
 #feedback_text{
+    width: 1rem;
     margin-left: 2rem;
 }
 
@@ -460,4 +465,7 @@ img{
     background-color: rgba(0, 0, 0, 0.0001);
     border-color: #007bff;
     color: white;
+}
+.feedback form{
+    width: 100vw;
 }

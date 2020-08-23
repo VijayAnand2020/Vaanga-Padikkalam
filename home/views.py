@@ -13,3 +13,6 @@ def home(request):
     elif response_text != None and response_rating == None and response_name==None:
         MyFeedback = Feedback.objects.create(model_feedback_rating="No Response Rating",model_feedback_text=response_text)
     return render(request, 'index.html')
+
+def feedback(request):
+    return render(request, 'home/feedback_form.html')

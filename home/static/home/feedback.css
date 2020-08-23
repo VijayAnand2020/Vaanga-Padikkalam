@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    background: url("https://allfreedesigns.com/wp-content/uploads/2015/06/black-patterns-16.jpg") repeat;
+    background-attachment: fixed;
+    color: white;
+}
