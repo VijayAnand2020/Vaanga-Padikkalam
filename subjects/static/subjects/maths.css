@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
+@font-face{
+    font-family: beaver;
+    src: url("./beaver.ttf");
+}
+
+.nav-wrapper #dropdown{
+    width: 100px !important;
+}
+
+.dropdown-content{
+    width: 205px !important;
+    text-align: left !important;
+}
+
+.nav-wrapper{
+    background: rgba(0, 0, 0, 0.918) !important;
+}
+
+.brand-logo{
+    color: rgba(255, 69, 0, 0.8) !important;
+    margin-left: 2rem !important;
+    font-family: beaver !important;
+}
+
+#MainNav{
+    font-family: Roboto !important;
+}
+#MainNav li a{
+    font-size: 1.25rem !important;
+}
+
+#MainNav li{
+    line-height: 64px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#MainNav li .dropdown_trigger.active{
+    width: 250px;
+}
+
+@media (max-width:505px){
+    .brand-logo{
+        margin-left: 0 !important;
+        font-family: beaver !important;
+        font-size: 1.4rem !important;
+    }
+}

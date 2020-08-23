@@ -13,12 +13,12 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="brand-logo">Vaanga Padikkalam</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul style="margin-right:5rem;" class="right hide-on-med-and-down">
+            <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
 
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a class='dropdown-trigger btn' coverTrigger="false" href='#' data-target='dropdown1'>Subjects</a></li>
+                <li><a class='dropdown-trigger btn' style="width:150px;" href='#' data-target='dropdown1'>Subjects</a></li>
             </ul>
         </div>
     </nav>
@@ -29,7 +29,7 @@
   </ul>
 
    <!-- Dropdown Structure -->
-   <ul style="width: 170px;left: 1159.39px;" id='dropdown1' class='dropdown-content'>
+   <ul style="left: 1162.39px !important;" id='dropdown1' class='dropdown-content'>
         <li><a href="#!">தமிழ்</a></li>
         <li><a href="#!">English</a></li>
         <li><a href="#!">Mathematics</a></li>
@@ -61,7 +61,8 @@
       });
       $('.dropdown-trigger').dropdown();
       $('.dropdown-trigger').dropdown({
-          coverTrigger: false
+          coverTrigger: false,
+          isScrollable: false
       });
   </script>
 </body>
