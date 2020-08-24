@@ -1,24 +1,35 @@
-{% load static%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'subjects/feedback.css'%}">
+    <link rel="stylesheet" href="{% static 'home/feedback_form.css' %}">
     <title>Feedback</title>
+    <style>
+    body{
+    background: url("https://www.desktopbackground.org/download/o/2014/03/04/726244_hd-website-backgrounds-wallpapers-zone_1920x1080_h.jpg");
 
+    }
+    </style>
 </head>
 <body>
-    <h1>FEEDBACK</h1>
-    <form action="#" >
-        <p>Please enter your feedback</p>
-        <label><input type="radio" text="feedback_text" name="radioset">Worst</label>
-        <label><input type="radio" text="feedback_text" name="radioset">Bad</label>
-        <label><input type="radio" text="feedback_text" name="radioset">Good</label>
-        <label><input type="radio" text="feedback_text" name="radioset">Better</label>
-        <label><input type="radio" text="feedback_text" name="radioset">Excellent</label>
-
-
+    <h1>FEEDBACK FORM</h1>
+    <form action="#">
+        <p>Please provide your Feedback</p>
+        <br>
+        <label><input type="radio" name="radioset">Worst</label>
+        <label><input type="radio" name="radioset">Bad</label>
+        <label><input type="radio" name="radioset">Good</label>
+        <label><input type="radio" name="radioset">Better</label>
+        <label><input type="radio" name="radioset">Excellent</label>
+        <br>
+        <h1>Enter your message</h1>
+        <br><br><br><br>
+        <textarea name="feedback_text" id="feedback_text" cols="70" rows="20" placeholder="enter your text"></textarea>
+        <br>
+        <input class="submit_button" type="submit"><input class="reset_button" type="reset">
+        
     </form>
 </body>
-</html>
+</html> 

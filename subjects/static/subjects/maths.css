@@ -15,8 +15,12 @@
     text-align: left !important;
 }
 
-.nav-wrapper{
-    background: rgba(0, 0, 0, 0.918) !important;
+.nav-wrapper,.sidenav{
+    background: black !important;
+}
+
+.sidenav li>a{
+    color: white !important;
 }
 
 .brand-logo{
@@ -40,6 +44,16 @@
 
 #MainNav li .dropdown_trigger.active{
     width: 250px;
+}
+
+.nav-wrapper ul li a:hover{
+    background: white !important;
+    color: black !important;
+}
+
+#logo{
+    color: rgba(255, 69, 0, 0.8) !important;
+    font-family: beaver !important;
 }
 
 @media (max-width:505px){
