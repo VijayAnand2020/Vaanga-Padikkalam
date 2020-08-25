@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    /* padding-top:18px */
 }
-body{
+body
+{
     background: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     color:white;
     font-family: sans-serif;
@@ -24,6 +25,59 @@ form label
 {
     margin: 3rem;
     font-size: 1.5rem;
+    cursor:pointer;
+}
+form h1
+{   float: left;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+textarea
+{
+    margin-left: 2rem;
+    font-size: 1rem;  
+    
+}
+.submit_button
+{
+    margin-left: 2rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 5.5rem;
+    font-size: 1.3rem;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+    cursor:pointer;
+}
+.reset_button
+{
+    margin-left: 2rem;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 5.5rem;
+    font-size: 1.3rem;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+    cursor:pointer;
+}
+@media(max-width:855px)
+{
+    h1
+{
+    padding:50px;
+    
+}
+ form p{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+form label
+{   
+    margin: 3rem;
+    font-size: 1.5rem;
 }
 form h1
 {   float: left;
@@ -37,16 +91,15 @@ textarea
 
     
 }
-.submit_button{
+.submit_button
+{
     margin-left: 2rem;
     box-sizing: border-box;
     margin-top: 1rem;
     height: 3rem;
     width: 5.5rem;
     font-size: 1.3rem;
-    font-family: cursive;
-    font-style: italic;
-    font-weight: bolder;
+
 }
 .reset_button
 {
@@ -55,7 +108,6 @@ textarea
     height: 3rem;
     width: 5.5rem;
     font-size: 1.3rem;
-    font-family: cursive;
-    font-style: italic;
-    font-weight: bolder;
+    
+}
 }

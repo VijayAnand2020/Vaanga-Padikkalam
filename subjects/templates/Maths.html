@@ -18,13 +18,13 @@
             <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
 
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a class='dropdown-trigger btn' style="width:150px;" href='#' data-target='dropdown1'>Subjects</a></li>
+                <li><a class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:16px" href='#' data-target='dropdown1'>Subjects</a></li>
             </ul>
         </div>
     </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <h5 id="Logo">Vaanga Padikklam</h5>
+    <h5 id="Logo"><a href="{% url 'home' %}">Vaanga Padikklam</a></h5>
     <li><a href="{% url 'home' %}">Home</a></li>
     <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1-resp'>Subjects</a></li>
   </ul>

@@ -51,9 +51,16 @@
     color: black !important;
 }
 
-#logo{
+h5{
     color: rgba(255, 69, 0, 0.8) !important;
     font-family: beaver !important;
+    text-align: center;
+    text-decoration: underline white;
+}
+
+h5 a:visited{
+    color: rgba(255, 69, 0, 0.8) !important;
+    text-decoration: underline white;
 }
 
 @media (max-width:505px){
