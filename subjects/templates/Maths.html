@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
     <title>Mathematics</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Vaanga Padikkalam</a>
+            <a href="{% url 'home' %}" class="brand-logo">Vaanga Padikkalam</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
 

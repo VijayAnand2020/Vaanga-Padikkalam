@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-
 @font-face{
     font-family: beaver;
     src: url("./beaver.ttf");
@@ -8,6 +6,10 @@
 
 .nav-wrapper #dropdown{
     width: 100px !important;
+}
+
+#dropdown1 a:hover{
+    color: #26a69a !important;
 }
 
 .dropdown-content{
@@ -20,7 +22,13 @@
 }
 
 .sidenav li>a{
+    background: black !important;
+    border: none !important;
     color: white !important;
+}
+
+.sidenav{
+    text-align: center;
 }
 
 .brand-logo{

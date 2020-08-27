@@ -3,19 +3,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="max-width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="{% static 'home/feedback_form.css' %}">
     <title>Feedback</title>
     <style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
     body{
     background: url("https://www.desktopbackground.org/download/o/2014/03/04/726244_hd-website-backgrounds-wallpapers-zone_1920x1080_h.jpg");
-
+    
     }
     *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top:18px
+    padding-top:5px
 }
 body
 {
@@ -27,7 +28,7 @@ body
 h1
 {
     text-align: center;
-    margin-top:30px;
+    margin-top:10px;
 }
  form p{
     font-size: 2rem;
@@ -39,6 +40,10 @@ form label
     font-size: 1.5rem;
     cursor:pointer;
 }
+form label:hover{
+    text-decoration:underline;
+}
+
 form h1
 {   float: left;
     margin-left: 2rem;
@@ -48,34 +53,37 @@ textarea
 {
     margin-left: 2rem;
     font-size: 1rem;
-   
-    
+    font-family: 'PT Serif', serif;
 }
-.submit_button
-{
+.submit_button,.reset_button
+{    
+    color: white;
     margin-left: 2rem;
     box-sizing: border-box;
     margin-top: 1rem;
-    height: 3rem;
-    width: 5.5rem;
+    height: 3.5rem;
+    width: 7.5rem;
     font-size: 1.3rem;
     font-family: cursive;
     font-style: italic;
     font-weight: bolder;
     cursor:pointer;
+    background: rgba(0, 0, 0, 0.001);
+    border :2px solid white;
+    border-radius: 3px;
+    transition: all .5s;
 }
-.reset_button
-{
-    margin-left: 2rem;
-    box-sizing: border-box;
-    height: 3rem;
-    width: 5.5rem;
-    font-size: 1.3rem;
-    font-family: cursive;
-    font-style: italic;
-    font-weight: bolder;
-    cursor:pointer;
+.submit_button:hover,.reset_button:hover{
+    background: white;
+    color: black;
 }
+
+#fname{
+    height: 2rem;
+    width: 15rem;
+    font-family: 'PT serif', serif;
+}
+
 @media(max-width:855px)
 {
     h1
@@ -129,21 +137,29 @@ textarea
     </style>
 </head>
 <body>
-    <h1>FEEDBACK FORM</h1>
-    <form action="#">
-        <p>Please provide your feedback</p>
+    <h1 style="text-decoration:underline">FEEDBACK FORM</h1>
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        <p>Please provide your feedback:</p>
         <br>
-        <label><input type="radio" name="radioset">Worst</label>
-        <label><input type="radio" name="radioset">Bad</label>
-        <label><input type="radio" name="radioset">Good</label>
-        <label><input type="radio" name="radioset">Better</label>
-        <label><input type="radio" name="radioset">Excellent</label>
+        <p style="display: inline;">Enter your name(optional):</p>
+        <label for="feedback_name"><input id="fname" type="text" placeholder="Your name" name="feedback_name"></label>
         <br>
-        <h1>Enter your message:</h1>
+        <br>
+        <label><input type="radio" value="Worst"  name="radioset">Worst</label>
+        <label><input type="radio" value="Bad" name="radioset">Bad</label>
+        <label><input type="radio" value="Good" name="radioset">Good</label>
+        <label><input type="radio" value="Better" name="radioset">Better</label>
+        <label><input type="radio" value="Excellent" name="radioset">Excellent</label>
+        <br>
+        <h1>Enter your message:</h1>    
         <br><br><br><br>
-        <textarea name="feedback_text" id="feedback_text" cols="70" rows="20" placeholder="enter your text"></textarea>
+        <textarea name="feedback_text" id="feedback_text" cols="70" rows="11" placeholder="Enter your text..."></textarea>
         <br>
         <input class="submit_button" type="submit"><input class="reset_button" type="reset">
     </form>
+    <script>
+        document.getElementById("txtField").focus();
+    </script>
 </body>
 </html> 
