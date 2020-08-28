@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematics</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -31,25 +31,25 @@
 
    <!-- Dropdown Structure -->
    <ul style="left: 1162.39px !important;" id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">தமிழ்</a></li>
-        <li><a href="#!">English</a></li>
-        <li><a href="#!">Mathematics</a></li>
-        <li><a href="#!">Physics</a></li>
-        <li><a href="#!">Chemistry</a></li>
-        <li><a href="#!">Computer Science</a></li>
-        <li><a href="#!">Botany</a></li>
-        <li><a href="#!">Zoolgy</a></li>
+        <li><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li><a href="{% url 'english'%}">English</a></li>
+        <li><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li><a href="{% url 'physics'%}">Physics</a></li>
+        <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li><a href="{% url 'botany'%}">Botany</a></li>
+        <li><a href="{% url 'zoology'%}">Zoolgy</a></li>
    </ul>
 
    <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
-        <li><a href="#!">தமிழ்</a></li>
-        <li><a href="#!">English</a></li>
-        <li><a href="#!">Mathematics</a></li>
-        <li><a href="#!">Physics</a></li>
-        <li><a href="#!">Chemistry</a></li>
-        <li><a href="#!">Computer Science</a></li>
-        <li><a href="#!">Botany</a></li>
-        <li><a href="#!">Zoolgy</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'english'%}">English</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'physics'%}">Physics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoolgy</a></li>
     </ul>
           
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

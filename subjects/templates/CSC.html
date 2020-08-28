@@ -5,26 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science</title>
-    <link rel="stylesheet" href="{% static 'subjects/english.css' %}">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'subjects/csc.css' %}">
 </head>
 <body>
     <nav>
-        <p><a style="text-decoration: none;color: white;" href="{% url 'english' %}">Computer Science</a></p>
-        <ul>
-            <li style="margin-top: -1rem;margin-right: 4rem;"><a href="{% url 'home' %}">Home</a></li>
-            <li style="margin-right: 8rem;margin-top: -1rem;"><a href="#">Subjects</a>
-              <ul style="margin-top: -1.1rem;">
-                  <li><a href="{% url 'tamil' %}">Tamil</a></li>
-                  <li><a href="{% url 'english' %}">English</a></li>
-                  <li><a href="{% url 'maths' %}">Mathematics</a></li>
-                  <li><a href="{% url 'physics' %}">Physics</a></li>
-                  <li><a href="{% url 'chemistry' %}">Chemistry</a></li>
-                  <li><a href="{% url 'csc' %}">Computer Science</a></li>
-                  <li><a href="{% url 'botany' %}">Botany</a></li>
-                  <li><a href="{% url 'zoology' %}">Zoology</a></li>
-              </ul>
-            </li>
-        </ul>
-    </nav>  
+        <div class="nav-wrapper">
+            <a href="{% url 'home' %}" class="brand-logo">Vaanga Padikkalam</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
+
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:16px" href='#' data-target='dropdown1'>Subjects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <h5 id="Logo"><a href="{% url 'home' %}">Vaanga Padikklam</a></h5>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1-resp'>Subjects</a></li>
+  </ul>
+
+   <!-- Dropdown Structure -->
+   <ul style="left: 1162.39px !important;" id='dropdown1' class='dropdown-content'>
+        <li><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li><a href="{% url 'english'%}">English</a></li>
+        <li><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li><a href="{% url 'physics'%}">Physics</a></li>
+        <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li><a href="{% url 'botany'%}">Botany</a></li>
+        <li><a href="{% url 'zoology'%}">Zoolgy</a></li>
+   </ul>
+
+   <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'english'%}">English</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'physics'%}">Physics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoolgy</a></li>
+    </ul>
+          
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+   <script>
+      $(document).ready(function()
+      {
+          $('.sidenav').sidenav();
+      });
+      $('.dropdown-trigger').dropdown();
+      $('.dropdown-trigger').dropdown({
+          coverTrigger: false,
+          isScrollable: false
+      });
+  </script>
 </body>
 </html>

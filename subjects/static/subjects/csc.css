@@ -1,108 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
 @font-face{
-    font-family: NavFont;
+    font-family: beaver;
     src: url("./beaver.ttf");
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+.nav-wrapper #dropdown{
+    width: 100px !important;
 }
 
-.csmain{
-    height: calc(100vh - 80px);
-    width: 100vw;
-    /* background: url("https://www.eschoolnews.com/files/2016/12/computer-science-education-600x400.jpg"); */
-    background-color: red;
+#dropdown1 a:hover{
+    color: #26a69a !important;
 }
 
-.csc_nav{
-    width: 100vw;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.9);
+.dropdown-content{
+    width: 205px !important;
+    text-align: left !important;
 }
 
-.logo{
-    font-family: NavFont;
-    font-size: 2.5rem;
-    color: rgba(255, 69, 0, 0.8);
-    line-height: 80px;
+.nav-wrapper,.sidenav{
+    background: black !important;
+}
+
+.sidenav li>a{
+    background: black !important;
+    border: none !important;
+    color: white !important;
+}
+
+.sidenav{
+    text-align: center;
+}
+
+.brand-logo{
+    color: rgba(255, 69, 0, 0.8) !important;
+    margin-left: 2rem !important;
+    font-family: beaver !important;
+}
+
+#MainNav{
+    font-family: Roboto !important;
+}
+#MainNav li a{
+    font-size: 1.25rem !important;
+}
+
+#MainNav li{
+    line-height: 64px;
     padding-left: 10px;
     margin-right: 10px;
 }
 
-.csc_nav ul{
-    float: right;
-    margin-right: 90px;
+#MainNav li .dropdown_trigger.active{
+    width: 250px;
 }
 
-.csc_nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 5px;
+.nav-wrapper ul li a:hover{
+    background: white !important;
+    color: black !important;
 }
 
-.csc_nav ul li a{
-    font-family: sans-serif;
-    color: white;
-    font-size: 1.2rem;
-    padding: 7px 13px;
-    /* background-color: white; */
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-ul li a:hover{
-    background-color: white;
-    color: black;
-    transition: .5s;
-}
-
-.dropdown-menu a{
-    color: black;
-    font-family: sans-serif;
-}
-
-#drop{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.0001);
-    box-shadow: none;
-    border: none;
-}
-
-.dropdown-item{
-    background-color: rgba(0, 0, 0, 0.9);
-    margin:1px;
-}
-.dropdown-menu.show {
-    background: black;
-    display: block;
-    margin: 0;
-}
-
-#droptem{
-    height: 4rem;
-    line-height: 4rem;
+h5{
+    color: rgba(255, 69, 0, 0.8) !important;
+    font-family: beaver !important;
     text-align: center;
+    text-decoration: underline white;
 }
 
-#Home_edit{
-    margin-top: -2px;
-    height: 5rem;
-    text-align: center;
-    width: 8rem;
-    background-color: rgba(0, 0, 0, 0.0001);
-    display: block;
-    margin-bottom: 0%;
-    padding-bottom: 0;
+h5 a:visited{
+    color: rgba(255, 69, 0, 0.8) !important;
+    text-decoration: underline white;
 }
 
-#Home_edit:hover{
-    background-color: white;
-    color: black;
+@media (max-width:587px){
+    .brand-logo{
+        margin-left: 0 !important;
+        font-family: beaver !important;
+        font-size: 1.4rem !important;
+    }
 }

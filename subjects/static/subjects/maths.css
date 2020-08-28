@@ -71,7 +71,7 @@ h5 a:visited{
     text-decoration: underline white;
 }
 
-@media (max-width:505px){
+@media (max-width:587px){
     .brand-logo{
         margin-left: 0 !important;
         font-family: beaver !important;
