@@ -71,6 +71,16 @@ h5 a:visited{
     text-decoration: underline white;
 }
 
+.card_main{
+    height: calc(100vh - 64px);
+    width: 100vw;
+    background-color: blueviolet;
+}
+
+.card_main h4{
+    margin-top:0;
+}
+
 @media (max-width:587px){
     .brand-logo{
         margin-left: 0 !important;

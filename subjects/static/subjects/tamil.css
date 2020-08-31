@@ -70,6 +70,15 @@ h5 a:visited{
     color: rgba(255, 69, 0, 0.8) !important;
     text-decoration: underline white;
 }
+.card_main{
+    height: calc(100vh - 64px);
+    width: 100vw;
+    background-color: blueviolet;
+}
+
+.card_main h4{
+    margin-top:0;
+}
 
 @media (max-width:587px){
     .brand-logo{
