@@ -56,11 +56,19 @@
         <h2 style="margin: 0;color: white;font-family: Roboto;padding-top: 3%;text-decoration: underline;" class="center black">Mathematics</h2>
         <div style="color:white;text-align: center;overflow: hidden;margin-top: -5%;" class="carousel">
             <div class="carousel-item">
-                <a href="#"><img src="{% static 'subjects\Maths\MT1.jpg' %}"></a>
+                <a href="#"><img src="{% static 'subjects\Maths\MTV1.jpg' %}"></a>
+                <h4>Volume 1</h4>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="{% static 'subjects\Maths\MTV2.jpg' %}"></a>
+                <h4>Volume 2</h4>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'maths_chapter_1' %}"><img src="{% static 'subjects\Maths\MT1.jpg' %}"></a>
                 <h4>Chapter 1</h4>
             </div>
             <div class="carousel-item">
-                <a href="#"><img src="{% static 'subjects\Maths\MT2.jpg' %}"></a>
+                <a href="{% url 'maths_chapter_2' %}"><img src="{% static 'subjects\Maths\MT2.jpg' %}"></a>
                 <h4>Chapter 2</h4>
             </div>
             <div class="carousel-item">

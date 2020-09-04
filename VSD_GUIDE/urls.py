@@ -20,4 +20,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('', include('subjects.urls')),
+    path('', include('sub_tamil.urls')),
+    path('', include('sub_english.urls')),
+    path('', include('sub_maths.urls')),
+    path('', include('sub_physics.urls')),
+    path('', include('sub_chemistry.urls')),
+    path('', include('sub_csc.urls')),
+    path('', include('sub_botany.urls')),
+    path('',include('sub_zoology.urls'))
 ]
