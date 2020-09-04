@@ -3,14 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.nav{
+.nav
+{
     height: 64px;
     width: 100vw;
     background: #132E32;
 }
 
-.main{
-    height: calc(100vh - 64px);
+.main
+{
+    height: calc(100vh - 100px);
     width: 100vw;
+}
+
+#Chap_name:hover{
+    text-decoration: underline;
 }

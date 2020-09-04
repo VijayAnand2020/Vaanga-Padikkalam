@@ -1,31 +1,130 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics: Chapter-1</title>
     <link rel="stylesheet" href="{% static 'sub_maths/Chapter_1.css' %}">
-    <title>Chapter 1:Applications of  Matrices and Deteminants</title>
+    <link rel="stylesheet" href="{% static 'subjects/maths.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="nav">
-        
-    </div>
-    <h1>Chapter 1</h1>
-    <br>
-    <h2>Applications of Matrices and Deteminants</h2>
-    <br>
-    <div class="chapter_1">
-        <ul>
-            <li><a href="#"></a>Exercise:1.1</li>
-            <li><a href="#"></a>Exercise:1.2</li>
-            <li><a href="#"></a>Exercise:1.3</li>
-            <li><a href="#"></a>Exercise:1.4</li>
-            <li><a href="#"></a>Exercise:1.5</li>
-            <li><a href="#"></a>Exercise:1.6</li>
-            <li><a href="#"></a>Exercise:1.7</li>
-            <li><a href="#"></a>Exercise:1.8</li>
+  <nav>
+    <div class="nav-wrapper #263238 blue-grey darken-4">
+        <a href="{% url 'home' %}" class="brand-logo">Vaanga Padikkalam</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
+
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:16px;box-shadow: none;" href='#' data-target='dropdown1'>Subjects</a></li>
         </ul>
     </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+  <h5 id="Logo"><a href="{% url 'home' %}">Vaanga Padikklam</a></h5>
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1-resp'>Subjects</a></li>
+  </ul>
+
+  <!-- Dropdown Structure -->
+  <ul style="left: 1162.39px !important;margin-top:1rem;" id='dropdown1' class='dropdown-content'>
+      <li><a href="{% url 'tamil'%}">தமிழ்</a></li>
+      <li><a href="{% url 'english'%}">English</a></li>
+      <li><a href="{% url 'maths'%}">Mathematics</a></li>
+      <li><a href="{% url 'physics'%}">Physics</a></li>
+      <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
+      <li><a href="{% url 'csc'%}">Computer Science</a></li>
+      <li><a href="{% url 'botany'%}">Botany</a></li>
+      <li><a href="{% url 'zoology'%}">Zoolgy</a></li>
+  </ul>
+
+  <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'tamil'%}">தமிழ்</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'english'%}">English</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'maths'%}">Mathematics</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'physics'%}">Physics</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
+      <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoolgy</a></li>
+  </ul>
+    <div class="main">
+        <h4 style="text-decoration: underline;" class="center" >Chapter:1 Applications of Matrices and Determinants</h4>
+        <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Exercise:1.1</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Inverse of a Non-singular square Matrix</span><br>
+                <span>&#x27F6; Adjoint of Square Matrix</span><br>
+                <span>&#x27F6; Properties of Inverse of matrices</span><br>
+                <span>&#x27F6; Application of matrices to Geometry</span><br>
+                <span>&#x27F6; Application of matrices of Cryptography</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Exercise:1.2</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Elementary Tranformations of Matrix</span><br>
+                <span>&#x27F6; Row Echelon form</span><br>
+                <span>&#x27F6; Rank of a Matrix</span><br>
+                <span>&#x27F6; Gauss Jordan  method</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.3</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Formation of System of Linear Equations</span><br>
+                <span>&#x27F6; System of linear equaion in Matrix form</span><br>
+                <span>&#x27F6; Solution to a linear Equations</span><br>
+                <span>&#x27F6; Matrix Inversion Method</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.4</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Matricse:Cramer's rule</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.5</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Matrix:Gaussian Elimination method</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.6</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Matrix:Non-Homogeneous Linear Equations</span><br>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.7</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Matrix:Homogeneous System of Linear Equations</span><br></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Exercise:1.8</div>
+              <div class="collapsible-body">
+                <span>&#x27F6; Matrices:One Marks</span><br>
+              </div>
+            </li>
+          </ul>
+                
+    </div>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+        $('.dropdown-trigger').dropdown({
+          coverTrigger: false,
+          isScrollable: false
+        });
+    </script>
 </body>
 </html>
+
+<!-- <a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">Hover me!</a>
+ -->
