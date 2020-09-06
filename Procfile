@@ -1,0 +1,1 @@
+web: gunicorn VSD_GUIDE.wsgi
