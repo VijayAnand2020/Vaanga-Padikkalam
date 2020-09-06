@@ -3,3 +3,16 @@
     padding:0;
     box-sizing:border-box;
 }
+
+
+a:hover{
+    text-decoration: none;
+}
+
+#sub_menu{
+    color: white !important;
+}
+
+#sub_menu:hover{
+    color: black !important;
+}

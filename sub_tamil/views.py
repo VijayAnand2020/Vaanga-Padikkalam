@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
+def tam_textbook(request):
+    return render(request,"sub_tamil/Tamil_textbook.html")
+
+def tam_extras(request):
+    return render(request,"sub_tamil/Tamil_Extras.html")
+
 def tam_unit_1(request):
     return render(request,"sub_tamil/Unit_1.html")
 

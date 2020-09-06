@@ -8,6 +8,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('csc/textbook', views.csc_textbook, name='csc_textbook'),
     path('csc/chapter1', views.csc_chapter_1, name='csc_chapter_1'),
     path('csc/chapter2', views.csc_chapter_2, name='csc_chapter_2'),
     path('csc/chapter3', views.csc_chapter_3, name='csc_chapter_3'),

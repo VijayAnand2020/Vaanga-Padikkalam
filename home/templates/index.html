@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <link rel="icon" href="{% static 'home/favicon.jpg' %}"type ="image/gif" sizes="16x16">
     <title>VSD Guide</title>
     {% comment %} <style>
         input[type=radio] {
@@ -46,7 +47,7 @@
         <label class="logo"><a style="color: rgba(255, 69, 0, 0.8);text-decoration: none;" href="{% url 'home' %}">Vaanga Padikkalam</a></label>
         <ul style="text-decoration: none;">
             <li><a class="active" href="#" onclick="check()">Home</a></li>
-            <li><a href="#about" onclick="check()">About</a></li>
+            {% comment %} <li><a href="#about" onclick="check()">About</a></li> {% endcomment %}
             <li><a href="#team" onclick="check()">Team</a></li>
             <li><a href="#content" onclick="check()">Subjects</a></li>
             <li><a href="{% url 'feedback' %}" onclick="check()">Feedback</a></li>
@@ -64,10 +65,20 @@
             <p style="font-weight: bold;line-height: 1rem;">Well, You are at the right place.</p>
             <p style="font-weight: bolder;">We have the Study materials you want.</p>
         </div>
-        
+{% comment %}         
         <div id="about">
-            About
-        </div>
+            <h3>About our Page</h3>
+            <ul>
+                <li><p>&#9755; This Guide lets you to attain free Knowledge</p></li>
+                <li><p>&#9755;we bring it to your notice just to make the best out of this source</p></li>
+                <li><p>&#9755;It contains the full contents of 12th Standard along with clear answers</p></li>
+                <li><p>&#9755;We hereby solemly wish you great Success for the Future . Get the Fruits with the help of our creation</p></li>
+                <li><p>&#9755;Developed with the Love and Social welfare</p></li>
+                <li><p>&#9755;May you cherish with all Victory by connecting with our website</p></li>
+                <li class="reg"><p>With Regards,</p></li>
+                <li class="dev"><p>VSD Developers</p></li>
+            </ul>  
+        </div> {% endcomment %}
         
         <div id="team">
             <!-- <p style="z-index: 0;">team</p> -->
@@ -101,7 +112,7 @@
                     <div class="mycard">
                         <div class="upcard">
                         </div>
-                        <img id="sri_img" style="border-radius: 100%;" src="{% static 'home/thanos_modified.png' %}" width="45%" height="45%" alt="">
+                        <img id="sri_img" style="border-radius: 100%;" src="{% static 'home/Dhanush.png' %}" width="45%" height="45%" alt="">
                         <h3 id="thanos_name" style="color: black;">Dhanush.T</h3>
                         <p style="font-weight: lighter;color: black;" id='thanos_desc'>Web-Developer</p>
                     </div>

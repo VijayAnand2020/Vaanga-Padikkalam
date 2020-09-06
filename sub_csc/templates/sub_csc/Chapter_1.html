@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Science: Chapter-1</title>
+        <link rel="icon" href="{% static 'home/favicon.jpg' %}"type ="image/gif" sizes="16x16">
+<title>Computer Science: Chapter-1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'subjects/maths.css' %}">
@@ -22,8 +23,8 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
 
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:16px;box-shadow: none;" href='#' data-target='dropdown1'>Subjects</a></li>
+                <li><a id="home_menu" href="{% url 'home' %}">Home</a></li>
+                <li><a id="sub_menu" class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:18px;box-shadow: none;" href='#' data-target='dropdown1'>Subjects</a></li>
             </ul>
         </div>
     </nav>
@@ -43,7 +44,7 @@
         <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
         <li><a href="{% url 'csc'%}">Computer Science</a></li>
         <li><a href="{% url 'botany'%}">Botany</a></li>
-        <li><a href="{% url 'zoology'%}">Zoolgy</a></li>
+        <li><a href="{% url 'zoology'%}">Zoology</a></li>
    </ul>
 
    <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
@@ -54,7 +55,7 @@
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
-        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoolgy</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoology</a></li>
     </ul>
     <div  class="thanks">
         <div style="width: 100vw;height: calc(100vh - 64px);margin: 0;" class="jumbotron text-xs-center">
@@ -65,10 +66,10 @@
               Having trouble? <a href="mailto:vsddevelopers2020@gmail.com">Contact us</a>
             </p>
             <p class="lead">
-                <a href="#" target="_blank" style="margin-right: .7rem;">
+                <a href="https://drive.google.com/u/0/uc?id=1YYyVXtqfMUKbcZtV6KdFBnGmTBK2X_cs&export=download" style="margin-right: .7rem;">
                     <button style="height: 5rem;overflow: hidden;" type="button" class="btn btn-outline-success"><i class="fa fa-download"></i>  Download Now!</button>
                 </a>
-                <a href="#" target="_blank" style="margin-right: .7rem;">
+                <a href="https://drive.google.com/file/d/1YYyVXtqfMUKbcZtV6KdFBnGmTBK2X_cs/view?usp=sharing" target="_blank" style="margin-right: .7rem;">
                     <button style="height: 5rem;" type="button" class="btn btn-outline-success">
                         <i style="font-size: 24px;" class="fas">
                             &#xf5da;

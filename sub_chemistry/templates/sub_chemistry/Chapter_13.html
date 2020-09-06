@@ -4,9 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry: Chapter-13</title>
+        <link rel="icon" href="{% static 'home/favicon.jpg' %}"type ="image/gif" sizes="16x16">
+<title>Chemistry: Chapter-13</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'subjects/maths.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+    <link rel="stylesheet" href="{% static 'sub_csc/Chapter_1.css' %}">
+
 </head>
 <body>
-    
+    <nav>
+        <div class="nav-wrapper #263238 blue-grey darken-4">
+            <a href="{% url 'home' %}" class="brand-logo">Vaanga Padikkalam</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="MainNav" style="margin-right:5rem;" class="right hide-on-med-and-down">
+
+                <li><a id="home_menu" href="{% url 'home' %}">Home</a></li>
+                <li><a id="sub_menu" class='dropdown-trigger btn' style="width:150px;background: rgba(0,0,0,0.001);height:64px;padding-top:18px;box-shadow: none;" href='#' data-target='dropdown1'>Subjects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <h5 id="Logo"><a href="{% url 'home' %}">Vaanga Padikklam</a></h5>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1-resp'>Subjects</a></li>
+  </ul>
+
+   <!-- Dropdown Structure -->
+   <ul style="left: 1162.39px !important;" id='dropdown1' class='dropdown-content'>
+        <li><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li><a href="{% url 'english'%}">English</a></li>
+        <li><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li><a href="{% url 'physics'%}">Physics</a></li>
+        <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li><a href="{% url 'botany'%}">Botany</a></li>
+        <li><a href="{% url 'zoology'%}">Zoology</a></li>
+   </ul>
+
+   <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'tamil'%}">தமிழ்</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'english'%}">English</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'maths'%}">Mathematics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'physics'%}">Physics</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoology</a></li>
+    </ul>
+    <div  class="thanks">
+        <div style="width: 100vw;height: calc(100vh - 64px);margin: 0;" class="jumbotron text-xs-center">
+            <h1 class="display-3">Thank You!</h1>
+            <p class="lead"><strong>Our Heartful Thanks to you for spending your quality time with us.</p>
+            <hr>
+            <p>
+              Having trouble? <a href="mailto:vsddevelopers2020@gmail.com">Contact us</a>
+            </p>
+            <p class="lead">
+                <a href="https://drive.google.com/u/0/uc?id=156FUJNHb9DftfZ7kzqg-z8nWtpqQoa5v&export=download"style="margin-right: .7rem;">
+                    <button style="height: 5rem;overflow: hidden;" type="button" class="btn btn-outline-success"><i class="fa fa-download"></i>  Download Now!</button>
+                </a>
+                <a href="https://drive.google.com/file/d/156FUJNHb9DftfZ7kzqg-z8nWtpqQoa5v/view?usp=sharing" target="_blank" style="margin-right: .7rem;">
+                    <button style="height: 5rem;" type="button" class="btn btn-outline-success">
+                        <i style="font-size: 24px;" class="fas">
+                            &#xf5da;
+                        </i>
+                          Read Online!
+                    </button>
+                </a>
+            </p>
+          </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+   <script>
+      $(document).ready(function()
+      {
+          $('.sidenav').sidenav();
+      });
+      $('.dropdown-trigger').dropdown();
+      $('.dropdown-trigger').dropdown({
+          coverTrigger: false,
+          isScrollable: false
+      });
+      $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+  </script>
 </body>
 </html>

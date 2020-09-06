@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
+def eng_textbook(request):
+    return render(request, "sub_english/Eng_Textbook.html")
+
+def eng_extras(request):
+    return render(request, "sub_english/Eng_Extras.html")
+
 def eng_unit_1(request):
     return render(request, "sub_english/Unit_1.html")
 

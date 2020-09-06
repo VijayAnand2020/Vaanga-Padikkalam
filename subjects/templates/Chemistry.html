@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry</title>
+        <link rel="icon" href="{% static 'home/favicon.jpg' %}"type ="image/gif" sizes="16x16">
+<title>Chemistry</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -38,7 +39,7 @@
         <li><a href="{% url 'chemistry'%}">Chemistry</a></li>
         <li><a href="{% url 'csc'%}">Computer Science</a></li>
         <li><a href="{% url 'botany'%}">Botany</a></li>
-        <li><a href="{% url 'zoology'%}">Zoolgy</a></li>
+        <li><a href="{% url 'zoology'%}">Zoology</a></li>
    </ul>
 
    <ul id='dropdown1-resp' coverTrigger="false" class='dropdown-content'>
@@ -49,7 +50,7 @@
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'chemistry'%}">Chemistry</a></li>
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'csc'%}">Computer Science</a></li>
         <li style="border-bottom: 2px solid black !important;"><a href="{% url 'botany'%}">Botany</a></li>
-        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoolgy</a></li>
+        <li style="border-bottom: 2px solid black !important;"><a href="{% url 'zoology'%}">Zoology</a></li>
     </ul>
 
 
@@ -57,12 +58,8 @@
         <h2 style="margin: 0;color: white;font-family: Roboto;padding-top: 3%;text-decoration: underline;" class="center black">Chemistry</h2>
         <div style="color:white;text-align: center;overflow: hidden;margin-top: -5%;" class="carousel">
             <div class="carousel-item">
-                <a href="#"><img src="{% static 'subjects\Chemistry\CHV1.jpg' %}"></a>
-                <h4>Volume 1</h4>
-            </div>
-            <div class="carousel-item">
-                <a href="#"><img src="{% static 'subjects\Chemistry\CHV2.jpg' %}"></a>
-                <h4>Volume 2</h4>
+                <a href="{% url 'chem_textbook' %}"><img src="{% static 'subjects\Chemistry\CHV1.jpg' %}"></a>
+                <h4>Textbook</h4>
             </div>
             <div class="carousel-item">
                 <a href="{% url 'chem_chapter_1' %}"><img src="{% static 'subjects\Chemistry\CH1.jpg' %}"></a>
