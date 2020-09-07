@@ -32,7 +32,7 @@ h1
     margin-top:10px;
 }
  form p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
 }
 form label
@@ -85,6 +85,11 @@ textarea
     font-family: 'PT serif', serif;
 }
 
+#feedback_mail{
+    height: 2rem;
+    width: 15rem;
+    font-family: 'PT serif', serif;
+}
 @media(max-width:855px)
 {
     h1
@@ -131,21 +136,39 @@ textarea
     height: 3rem;
     width: 5.5rem;
     font-size: 1.3rem;
-    
 }
+    textarea{
+        margin-top: -3rem;
+        width: 75vw;
+        height: 40%;
+    }
+    form label{
+        font-size: 1.3rem;
+    }
+    form p{
+        font-size: 1.3rem;
+    }
 }
 
     </style>
 </head>
 <body>
-    <h1 style="text-decoration:underline">FEEDBACK FORM</h1>
+    <h2 style="text-decoration:underline;text-align: center;">FEEDBACK FORM</h2>
     <form action="{% url 'home' %}" method="POST">
         {% csrf_token %}
-        <p>Please provide your feedback:</p>
-        <br>
-        <p style="display: inline;">Enter your name(optional):</p>
+        <p style="display: inline;">Enter your name:</p>
         <label for="feedback_name"><input id="fname" type="text" placeholder="Your name" name="feedback_name"></label>
         <br>
+        <br>
+        <label for="feedback_age"><p style="display: inline;margin-left: -1.4rem;">Enter your age: </p></label>
+        <input style="margin-left: 13%;height: 2rem;width: 15rem;" placeholder="Your Age" type="number" name="feedback_age" id="feedback_age">
+        <br>
+        <br>
+        <label for="feedback_mail"><p style="display: inline;margin-left: -1.4rem;">Enter your Mail ID: </p></label>
+        <input style="margin-left: 13%;" type="email" placeholder="Your Mail ID" name="feedback_mail" id="feedback_mail">
+        <br>
+        <br>
+        <p>Rating:</p>
         <br>
         <label><input type="radio" value="Worst"  name="radioset">Worst</label>
         <label><input type="radio" value="Bad" name="radioset">Bad</label>
@@ -153,7 +176,7 @@ textarea
         <label><input type="radio" value="Better" name="radioset">Better</label>
         <label><input type="radio" value="Excellent" name="radioset">Excellent</label>
         <br>
-        <h1>Enter your message:</h1>    
+        <h2 style="text-align: left;margin-left: 1.5rem;">Enter your message:</h2>    
         <br><br><br><br>
         <textarea name="feedback_text" id="feedback_text" cols="70" rows="11" placeholder="Enter your text..."></textarea>
         <br>
