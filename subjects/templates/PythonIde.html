@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'home/favicon.jpg' %}"type ="image/gif" sizes="16x16">
+    <title>Python Online Editor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .IDE{
+            margin: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <iframe class="IDE" height="400px" width="100%" src="https://repl.it/@VJCBE/OnlinePythonIDE?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</body>
+</html>

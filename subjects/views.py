@@ -24,3 +24,6 @@ def botany(request):
 
 def zoology(request):
     return render(request, 'Zoology.html')
+
+def PythonIde(request):
+    return render(request, 'PythonIde.html')

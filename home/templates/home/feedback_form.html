@@ -59,7 +59,7 @@ textarea
 .submit_button,.reset_button
 {    
     color: white;
-    margin-left: 2rem;
+    margin-left: 3rem;
     box-sizing: border-box;
     margin-top: 1rem;
     height: 3.5rem;
@@ -80,6 +80,7 @@ textarea
 }
 
 #fname{
+    margin-left: 1.5rem;
     height: 2rem;
     width: 15rem;
     font-family: 'PT serif', serif;
@@ -90,55 +91,80 @@ textarea
     width: 15rem;
     font-family: 'PT serif', serif;
 }
+@media(min-width:856px)
+{
+    .feedback_head{
+        font-size:2rem;
+        margin:1rem 2rem 2rem;
+    }
+    .feedback_ptag{
+        margin:3rem 0 0 3rem;
+    }
+    .feed_age_ptag{
+        margin:3rem -5rem 0 4rem; 
+    }
+    .feed_mail_ptag{
+        margin:3rem -7.2rem 0 4rem;
+    }
+    .feed_rating_ptag{
+        /* display:inline; */
+        margin:1.5rem  0 0 3rem;
+    }
+    .msg_head{
+        margin: 1.5rem 0 0 3rem;
+    }
+    textarea{
+        margin-left: 3rem;
+    }
+}
+
 @media(max-width:855px)
 {
-    h1
-{
+    h1{
     padding:50px;
 
-    
-}
- form p{
-    font-size: 2rem;
-    margin-left: 2rem;
-}
-form label
-{   
-    margin: 3rem;
-    font-size: 1.5rem;
-}
-form h1
-{   float: left;
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-textarea
-{
-    margin-left: 2rem;
-    font-size: 1rem;
+        
+    }
+    form p{
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+    form label
+    {   
+        margin: 3rem;
+        font-size: 1.5rem;
+    }
+    form h1
+    {   float: left;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+    textarea
+    {
+        margin-left: 2rem;
+        font-size: 1rem;
+        
+    }
+    .submit_button
+    {
+        margin-left: 2rem;
+        box-sizing: border-box;
+        margin-top: 1rem;
+        height: 3rem;
+        width: 5.5rem;
+        font-size: 1.3rem;
 
-    
-}
-.submit_button
-{
-    margin-left: 2rem;
-    box-sizing: border-box;
-    margin-top: 1rem;
-    height: 3rem;
-    width: 5.5rem;
-    font-size: 1.3rem;
-
-}
-.reset_button
-{
-    margin-left: 2rem;
-    box-sizing: border-box;
-    height: 3rem;
-    width: 5.5rem;
-    font-size: 1.3rem;
-}
+    }
+    .reset_button
+    {
+        margin-left: 2rem;
+        box-sizing: border-box;
+        height: 3rem;
+        width: 5.5rem;
+        font-size: 1.3rem;
+    }
     textarea{
-        margin-top: -3rem;
+        margin-top: 1rem;
         width: 75vw;
         height: 40%;
     }
@@ -148,36 +174,48 @@ textarea
     form p{
         font-size: 1.3rem;
     }
+    .msg_head{
+        margin: 1rem 0 0 2.5rem;
+    }
+    #fname{
+        margin-left: 0;
+    }
+}
+@media(max-width: 480px)
+{
+    .myradio{
+        margin: 1rem 0 0 1rem;
+    }
 }
 
     </style>
 </head>
 <body>
-    <h2 style="text-decoration:underline;text-align: center;">FEEDBACK FORM</h2>
+    <h2 style="text-decoration:underline;text-align: center;" class="feedback_head">FEEDBACK FORM</h2>
     <form action="{% url 'home' %}" method="POST">
         {% csrf_token %}
-        <p style="display: inline;">Enter your name:</p>
-        <label for="feedback_name"><input id="fname" type="text" placeholder="Your name" name="feedback_name"></label>
+        <p style="display: inline;" class="feedback_ptag">Enter your name:</p>
+        <label for="feedback_name"><input id="fname" type="text" placeholder="Your name" name="feedback_name" ></label>
         <br>
         <br>
-        <label for="feedback_age"><p style="display: inline;margin-left: -1.4rem;">Enter your age: </p></label>
-        <input style="margin-left: 13%;height: 2rem;width: 15rem;" placeholder="Your Age" type="number" name="feedback_age" id="feedback_age">
+        <label class="feed_age_ptag" for="feedback_age"><p style="display: inline;margin-left: -1.4rem;">Enter your age: </p></label>
+        <input style="margin-left: 13%;height: 2rem; width: 15rem;" min=1 placeholder="Your Age" type="number" name="feedback_age" id="feedback_age">
         <br>
         <br>
-        <label for="feedback_mail"><p style="display: inline;margin-left: -1.4rem;">Enter your Mail ID: </p></label>
+        <label class="feed_mail_ptag" for="feedback_mail"><p style="display: inline;margin-left: -1.4rem;">Enter your Mail ID: </p></label>
         <input style="margin-left: 13%;" type="email" placeholder="Your Mail ID" name="feedback_mail" id="feedback_mail">
         <br>
         <br>
-        <p>Rating:</p>
+        <p class="feed_rating_ptag">Rating:</p>
         <br>
-        <label><input type="radio" value="Worst"  name="radioset">Worst</label>
-        <label><input type="radio" value="Bad" name="radioset">Bad</label>
-        <label><input type="radio" value="Good" name="radioset">Good</label>
-        <label><input type="radio" value="Better" name="radioset">Better</label>
-        <label><input type="radio" value="Excellent" name="radioset">Excellent</label>
+        <label class="myradio"><input type="radio" value="Worst"  name="radioset">Worst</label>
+        <label class="myradio"><input type="radio" value="Bad" name="radioset">Bad</label>
+        <label class="myradio"><input type="radio" value="Good" name="radioset">Good</label>
+        <label class="myradio"><input type="radio" value="Better" name="radioset">Better</label>
+        <label class="myradio"><input type="radio" value="Excellent" name="radioset">Excellent</label>
         <br>
-        <h2 style="text-align: left;margin-left: 1.5rem;">Enter your message:</h2>    
-        <br><br><br><br>
+        <h2 class="msg_head"  style="text-align: left;">Enter your message:</h2>    
+        <br><br>
         <textarea name="feedback_text" id="feedback_text" cols="70" rows="11" placeholder="Enter your text..."></textarea>
         <br>
         <input class="submit_button" type="submit"><input class="reset_button" type="reset">
