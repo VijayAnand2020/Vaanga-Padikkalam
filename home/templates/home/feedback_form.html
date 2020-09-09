@@ -211,11 +211,11 @@ textarea
         <br>
         <br>
         <label class="feed_age_ptag" for="feedback_age"><p style="display: inline;margin-left: -1.4rem;">Enter your age: </p></label>
-        <input style="margin-left: 13%;height: 2rem; width: 15rem;" min=1 placeholder="Your Age" type="number" name="feedback_age" id="feedback_age">
+        <input defaultValue=0 style="margin-left: 13%;height: 2rem; width: 15rem;" min=1 placeholder="Your Age" type="number" name="feedback_age" id="feedback_age">
         <br>
         <br>
         <label class="feed_mail_ptag" for="feedback_mail"><p style="display: inline;margin-left: -1.4rem;">Enter your Mail ID: </p></label>
-        <input style="margin-left: 13%;" type="email" placeholder="Your Mail ID" name="feedback_mail" id="feedback_mail">
+        <input style="margin-left: 13%;" type="email" placeholder="Your Mail ID" name="feedback_mail" id="feedback_mail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" oninvalid="this.setCustomValidity('Please Enter a Valid Email Address')" oninput="this.setCustomValidity('')">
         <br>
         <br>
         <p class="feed_rating_ptag">Rating:</p>

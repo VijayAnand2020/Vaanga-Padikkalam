@@ -16,3 +16,12 @@ a:hover{
 #sub_menu:hover{
     color: black !important;
 }
+@media(max-width:858px){
+   
+    .btn {
+        margin:0.6rem;
+    }
+    #read_online{
+      width:13rem;
+    }
+}
